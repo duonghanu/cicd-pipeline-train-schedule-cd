@@ -51,7 +51,7 @@ pipeline {
         milestone(1)
         withCredentials([usernamePassword(credentialsId: 'webserver_login', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
           sshPublisher(
-            failonError: true,
+            failOnError: true,
             continueOnError: false,
             publishers: [
               sshPublisherDest (
